@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F棟詳細</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>F棟施設案内</h1>
+        <nav>
+            <a href="index.html">キャンパスマップに戻る</a>
+        </nav>
+    </header>
+    <main>
+        <div id="facility-filters">
+            <label><input type="checkbox" value="トイレ" checked> トイレ</label>
+            <label><input type="checkbox" value="エレベーター" checked> エレベーター</label>
+            <label><input type="checkbox" value="喫煙所" checked> 喫煙所</label>
+            <label><input type="checkbox" value="自動販売機" checked> 自動販売機</label>
+        </div>
+
+        <div id="floor-filters">
+            <label><input type="checkbox" value="1F" checked> 1F</label>
+            <label><input type="checkbox" value="2F" checked> 2F</label>
+            <label><input type="checkbox" value="3F" checked> 3F</label>
+        </div>
+
+        <section id="building-overview">
+            <h2>F棟　ネットワーキング研究センター</h2>
+            <img src="../images/F/IMG_3987.jpg" alt="F棟外観" class="building-image">
+        </section>
+
+        <section id="floor-details">
+            <h2>階別情報</h2>
+
+            <div class="floor" id="floor-1F" data-floor="1F">
+                <h3>1F</h3>
+                <p><em>地図データがありません</em></p>
+                <div class="floor-map">
+                    <img src="images/no_image.png" alt="No Image Available">
+                </div>
+                <div class="facilities">
+                    <h4>設備</h4>
+                    <p><em>設備情報がありません</em></p>
+                    <img src="images/no_image.png" alt="No Image Available">
+                </div>
+            </div>
+
+            <div class="floor" id="floor-2F" data-floor="2F">
+                <h3>2F</h3>
+                <img src="../images/F/IMG_3998.jpg" alt="2階マップ" class="floor-map">
+                <div class="facilities">
+                    <h4>設備</h4>
+                    <div class="facilities-container">
+                        <div class="facility" data-type="トイレ">
+                            <h5>トイレ</h5>
+                            <p>男女共用 x 1</p>
+                            <div class="image-gallery">
+                                <img src="../images/F/F_2F.jpg" alt="2階トイレ">
+                            </div>
+                        </div>
+                        <div class="facility" data-type="エレベーター">
+                            <h5>エレベーター</h5>
+                            <p>1基</p>
+                            <div class="image-gallery">
+                                <img src="../images/F/IMG_3823.jpg" alt="2階エレベーター">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floor" id="floor-3F" data-floor="3F">
+                <h3>3F</h3>
+                <p><em>地図データがありません</em></p>
+                <div class="floor-map">
+                    <img src="images/no_image.png" alt="No Image Available">
+                </div>
+                <div class="facilities">
+                    <h4>設備</h4>
+                    <p><em>設備情報がありません</em></p>
+                    <img src="images/no_image.png" alt="No Image Available">
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 プロジェクト課題</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バス停詳細</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>バス停施設案内</h1>
+        <nav>
+            <a href="index.html">キャンパスマップに戻る</a>
+        </nav>
+    </header>
+    <main>
+        <div id="facility-filters">
+            <label><input type="checkbox" value="トイレ" checked> トイレ</label>
+            <label><input type="checkbox" value="エレベーター" checked> エレベーター</label>
+            <label><input type="checkbox" value="喫煙所" checked> 喫煙所</label>
+            <label><input type="checkbox" value="自動販売機" checked> 自動販売機</label>
+        </div>
+        <div id="floor-filters">
+            <label><input type="checkbox" value="1F" checked> 1F</label>
+        </div>
+
+        <section id="building-overview">
+            <h2>バス停</h2>
+            <img src="../images/bus/IMG_3871.jpg" alt="バス停外観" class="building-image">
+        </section>
+
+        <section id="floor-details">
+            <h2>階別情報</h2>
+            
+            <div class="floor" id="floor-1F" data-floor="1F">
+                <h3>1F</h3>
+                <div class="floor-map">
+                    <p>地図データがありません</p>
+                    <img src="images/no_image.png" alt="No Image Available">
+                </div>
+                <div class="facilities">
+                    <h4>設備</h4>
+                    <div class="facilities-container">
+                        <div class="facility" data-type="トイレ">
+                            <h5>トイレ</h5>
+                            <p>男女共用 x 1</p>
+                            <div class="image-gallery">
+                                <img src="../images/bus/Buss_.jpg" alt="バス停トイレ">
+                            </div>
+                        </div>
+                        <div class="facility" data-type="自動販売機">
+                            <h5>自動販売機</h5>
+                            <p>3台</p>
+                            <div class="image-gallery">
+                                <img src="../images/bus/IMG_3876.JPG" alt="自動販売機">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 プロジェクト課題</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

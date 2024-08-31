@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R棟詳細</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>R棟施設案内</h1>
+        <nav>
+            <a href="index.html">キャンパスマップに戻る</a>
+        </nav>
+    </header>
+    <main>
+        <div id="facility-filters">
+            <label><input type="checkbox" value="トイレ" checked> トイレ</label>
+            <label><input type="checkbox" value="エレベーター" checked> エレベーター</label>
+            <label><input type="checkbox" value="喫煙所" checked> 喫煙所</label>
+            <label><input type="checkbox" value="自動販売機" checked> 自動販売機</label>
+        </div>
+
+       
+        <div id="floor-filters">
+            <label><input type="checkbox" value="1F" checked> 1F</label>
+        </div>
+        
+        <section id="building-overview">
+            <h2>R棟　リサーチハウス</h2>
+            <img src="../images/R/IMG_3949.jpg" alt="R棟外観" class="building-image">
+        </section>
+
+        <section id="floor-details">
+            <h2>階別情報</h2>
+
+            <div class="floor" id="floor-1F" data-floor="1F">
+                <h3>1F</h3>
+                <div class="floor-map">
+                    <p>地図データがありません</p>
+                    <img src="images/no_image.png" alt="No Image Available">
+                </div>
+                <div class="facilities">
+                    <h4>設備</h4>
+                    <div class="facilities-container">
+                        <div class="facility" data-type="トイレ">
+                            <h5>トイレ</h5>
+                            <p>男女共用 x 1</p>
+                            <div class="image-gallery">
+                                <img src="../images/R/R_1F.jpg" alt="1階トイレ">
+                            </div>
+                        </div>
+                        <div class="facility" data-type="喫煙所">
+                            <h5>喫煙所</h5>
+                            <p>外</p>
+                            <div class="image-gallery">
+                                <img src="../images/R/IMG_3776.jpg" alt="喫煙所">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 プロジェクト課題</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
