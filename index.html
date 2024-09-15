@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>関西大学高槻キャンパスマップ</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            if (password === "westriver") {
+                localStorage.setItem('authenticated', 'true');
+                document.getElementById('password-form').style.display = 'none';
+            } else {
+                alert("アクセスが拒否されました");
+            }
+            return false;
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem('authenticated') === 'true') {
+                document.getElementById('password-form').style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
+    <div id="password-form">
+        <form onsubmit="return checkPassword()">
+            <input type="password" id="password" placeholder="パスワードを入力してください">
+            <input type="submit" value="送信">
+        </form>
+    </div>
     <header>
-        <h1>関西大学高槻キャンパス</h1>
+        <h1>関西大学高槻キャンパス</h1> 
     </header>
     <main>
         <div id="campus-overview">
@@ -57,27 +81,6 @@
             </div>
         </div>
     </main>
-    <div id="password-form"></div>
-        <h2>パスワードを入力してください</h2>
-        <input type="password" id="password-input" placeholder="パスワード">
-        <button onclick="checkPassword()">送信</button>
-        <p id="error-message" style="color: red; display:none;">パスワードが間違っています</p>
-    </div>
-
-    <script type="text/javascript">
-        var correctPassword = "westriver";
-        document.getElementById('password-form').style.display = 'block';
-        function checkPassword() {
-            var inputPassword = document.getElementById('password-input').value;
-            if (inputPassword === correctPassword) {
-                document.getElementById('password-form').style.display = 'none'; 
-                document.getElementById('main-content').style.display = 'block';
-            } else {
-                document.getElementById('error-message').style.display = 'block'; 
-            }
-        }
-    </script>
-    
     <script src="script.js"></script>
 </body>
 </html>
