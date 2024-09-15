@@ -57,10 +57,24 @@
             </div>
         </div>
     </main>
+    <div id="password-form"></div>
+        <h2>パスワードを入力してください</h2>
+        <input type="password" id="password-input" placeholder="パスワード">
+        <button onclick="checkPassword()">送信</button>
+        <p id="error-message" style="color: red; display:none;">パスワードが間違っています</p>
+    </div>
+
     <script type="text/javascript">
-        var password = prompt("Enter the password:");
-        if (password !== "westriver") {
-            document.body.innerHTML = "Access Denied";
+        var correctPassword = "westriver";
+        document.getElementById('password-form').style.display = 'block';
+        function checkPassword() {
+            var inputPassword = document.getElementById('password-input').value;
+            if (inputPassword === correctPassword) {
+                document.getElementById('password-form').style.display = 'none'; 
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                document.getElementById('error-message').style.display = 'block'; 
+            }
         }
     </script>
     
